@@ -15,6 +15,6 @@ class Tweet < ApplicationRecord
     return unless persisted?
     # Ensure image is properly attached before sending
     image.analyze if image.attached?
-    TweetMailer.notify(self).deliver!
+    # TweetMailer.notify(self).deliver!
   end
 end
